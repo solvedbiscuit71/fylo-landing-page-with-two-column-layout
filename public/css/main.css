@@ -47,7 +47,8 @@ body {
   align-items: center;
   gap: 1em;
   width: 100%;
-  font-size: "Raleway";
+  font-family: "Raleway";
+  font-weight: bold;
 }
 .Form__email {
   padding: 1em;
@@ -97,6 +98,8 @@ header .header__logo {
 .Hero__content-title {
   text-align: center;
   font-size: 1.35rem;
+  font-family: "Raleway";
+  font-weight: bold;
 }
 .Hero__content-para {
   text-align: center;
@@ -271,7 +274,7 @@ footer .Navbar__list:first-child {
 }
 footer .Navbar li {
   display: block;
-  margin-block: 1em;
+  margin-bottom: 1em;
   font-size: 1rem;
   width: fit-content;
 }
@@ -338,6 +341,146 @@ footer .Footer__media svg:hover {
   }
   .Early-access .Form__btn {
     width: 60%;
+  }
+}
+/* desktop design */
+@media only screen and (min-width: 1200px) {
+  .Navbar li {
+    margin-left: 1em;
+    font-size: 1rem;
+  }
+  .Navbar li:hover {
+    cursor: pointer;
+  }
+
+  header {
+    padding-inline: 5em;
+  }
+  header .header__logo {
+    width: 8em;
+  }
+
+  .Hero {
+    padding-inline: 5em;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "content image" "form image";
+  }
+  .Hero__img {
+    grid-area: image;
+  }
+  .Hero__content {
+    grid-area: content;
+    padding-inline: 0;
+  }
+  .Hero__content-title {
+    font-size: 2.25rem;
+    text-align: left;
+    line-height: 1.25em;
+  }
+  .Hero__content-para {
+    font-size: 1.125rem;
+    text-align: left;
+  }
+  .Hero .Form {
+    grid-area: form;
+    flex-flow: row;
+  }
+  .Hero .Form__email {
+    flex: 66%;
+  }
+  .Hero .Form__btn {
+    flex: 33%;
+  }
+
+  .Productive::before {
+    background: white no-repeat url("../../images/bg-curve-desktop.svg") bottom left;
+  }
+
+  .Productive {
+    padding-inline: 5em;
+    padding-bottom: 8em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "content image" "testimony image";
+  }
+  .Productive__img {
+    grid-area: image;
+  }
+  .Productive__content {
+    grid-area: content;
+    padding-inline: 0;
+  }
+  .Productive__content-title {
+    font-size: 2.25rem;
+    text-align: left;
+    margin-block: 0.5em;
+  }
+  .Productive__content-para {
+    padding-inline: 0 3em;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .Productive__content-link {
+    text-align: left;
+  }
+  .Productive .Testimony {
+    grid-area: testimony;
+    justify-self: left;
+  }
+  .Productive .Testimony__content {
+    font-size: 1rem;
+    margin-bottom: 2em;
+  }
+
+  .Early-access {
+    padding-inline: 5em;
+    padding-block: 5em;
+    flex-flow: row;
+  }
+  .Early-access__content {
+    padding-inline: 0;
+  }
+  .Early-access__content-title {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+  .Early-access__content-para {
+    padding-inline: 0 3em;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .Early-access .Form {
+    padding-left: 6em;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .Early-access .Form__email {
+    width: 100%;
+  }
+  .Early-access .Form__btn {
+    width: 40%;
+  }
+
+  footer {
+    padding-inline: 5em 10em;
+    padding-block: 10em 2em;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  footer .Logo {
+    left: 5em;
+    top: 5em;
+  }
+  footer .Footer__contact p {
+    font-size: 1.25rem;
+  }
+  footer .Navbar li {
+    font-size: 1.25rem;
+  }
+  footer .Footer__media {
+    gap: 1em;
   }
 }
 

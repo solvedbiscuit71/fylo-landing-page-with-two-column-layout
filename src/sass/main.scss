@@ -66,7 +66,8 @@ body {
   gap: 1em;
   width: 100%;
 
-  font-size: "Raleway";
+  font-family: "Raleway";
+  font-weight: bold;
   &__email {
     padding: 1em;
     width:  min(100%,30em);
@@ -131,6 +132,9 @@ header {
   &__content-title {
     text-align: center;
     font-size: 1.35rem;
+
+    font-family: "Raleway";
+    font-weight: bold;
   }
 
   &__content-para {
@@ -370,7 +374,7 @@ footer {
   
     li {
       display: block;
-      margin-block: 1em;
+      margin-bottom: 1em;
 
       font-size: 1rem;
       width: fit-content;
@@ -460,3 +464,192 @@ footer {
   }
 }
 
+
+/* desktop design */
+
+@media only screen and (min-width: 1200px) {
+  $padding-inline: 5em;
+
+  .Navbar {
+    li {
+      margin-left: 1em;
+      font-size: 1rem;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+  }
+
+  header {
+    padding-inline: 5em;
+
+    .header__logo {
+      width: 8em;
+    }
+  }
+
+  .Hero {
+    padding-inline: 5em;
+
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: repeat(2,1fr);
+
+    grid-template-areas: 
+      "content image"
+      "form image";
+
+      &__img {
+        grid-area: image;
+      }
+
+      &__content {
+        grid-area: content;
+        padding-inline: 0;
+
+        &-title {
+          font-size: 2.25rem;
+          text-align: left;
+
+          line-height: 1.25em;
+        }
+
+        &-para {
+          font-size: 1.125rem;
+          text-align: left;
+        }
+      }
+
+      .Form {
+        grid-area: form;
+        flex-flow: row;
+
+        &__email {
+          flex: 66%;
+        }
+
+        &__btn {
+          flex: 33%;
+        }
+      }
+  }
+
+  .Productive::before {
+    background: white no-repeat url("../../images/bg-curve-desktop.svg") bottom left;
+  }
+
+  .Productive {
+    padding-inline: 5em;
+    padding-bottom: 8em;
+
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+      "content image"
+      "testimony image";
+
+    &__img {
+      grid-area: image;
+    }
+
+    &__content {
+      grid-area: content;
+      padding-inline: 0;
+
+      &-title {
+        font-size: 2.25rem;
+        text-align: left;
+
+        margin-block: .5em;
+      }
+
+      &-para {
+        padding-inline: 0 3em;
+
+        font-size: 1rem;
+        text-align: left
+      }
+
+      &-link {
+        text-align: left;
+      }
+    }
+
+    .Testimony {
+      grid-area: testimony;
+      justify-self: left;
+
+      &__content {
+        font-size: 1rem;
+        margin-bottom: 2em;
+      }
+    }
+  }
+
+  .Early-access {
+    padding-inline: 5em;
+    padding-block: 5em;
+    flex-flow: row;
+
+    &__content {
+      padding-inline: 0;
+
+      &-title {
+        font-size: 2.25rem;
+        text-align: left;
+      }
+
+      &-para {
+        padding-inline: 0 3em;
+
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+
+    .Form {
+      padding-left: 6em;
+      flex-flow: column;
+      align-items: flex-start;
+
+      &__email {
+        width: 100%;
+      }
+
+      &__btn {
+        width: 40%;
+      }
+    }
+  }
+
+  footer {
+    padding-inline: 5em 10em;
+    padding-block: 10em 2em;
+
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .Logo {
+      left: 5em;
+      top: 5em;
+    }
+
+    .Footer__contact {
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    .Navbar {
+      li {
+        font-size: 1.25rem;
+      }
+    }
+
+    .Footer__media {
+      gap: 1em;
+    }
+
+  }
+}
