@@ -1,0 +1,296 @@
+/* Color palette */
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Component classes */
+.Logo {
+  display: flex;
+  place-items: center;
+  gap: 0.5em;
+}
+.Logo__svg {
+  width: 56px;
+  height: 46px;
+  fill: white;
+}
+
+.Navbar {
+  font-family: "Open Sans";
+}
+.Navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.Navbar li {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-size: 0.9rem;
+}
+
+.Form {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  width: 100%;
+  font-size: "Raleway";
+}
+.Form__email {
+  padding: 1em;
+  width: min(100%, 30em);
+  border: 0.12em solid #4f4747;
+  border-radius: 0.2em;
+  color: #4f4747;
+}
+.Form__email:focus {
+  outline: 0.15em solid #3065f887;
+  border: 0.2em solid #3065f8;
+  outline-offset: 0.1em;
+}
+.Form__btn {
+  padding: 1em;
+  width: min(100%, 12.5em);
+  border: none;
+  border-radius: 0.2em;
+  background-color: #3065f8;
+  color: white;
+}
+.Form__btn:hover {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  cursor: pointer;
+}
+
+/* Mobile design */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 3em 2em;
+}
+header .header__logo {
+  width: 6em;
+}
+
+.Hero {
+  padding: 3em 2em;
+  font-family: "Open Sans";
+  display: grid;
+  place-items: center;
+}
+.Hero__img {
+  width: 100%;
+}
+.Hero__content-title {
+  text-align: center;
+  font-size: 1.35rem;
+}
+.Hero__content-para {
+  text-align: center;
+  font-size: 0.9rem;
+}
+.Hero .Form {
+  margin-block: 2em;
+}
+.Hero .Form__btn {
+  width: 100%;
+}
+
+.Productive::before {
+  content: "";
+  background: white no-repeat url("../../images/bg-curve-mobile.svg") bottom left;
+  background-size: contain;
+  width: 100%;
+  height: 5em;
+  position: absolute;
+  top: -5em;
+  left: 0;
+}
+
+.Productive {
+  margin-top: 5em;
+  padding: 3em 2em;
+  font-family: "Open Sans";
+  display: grid;
+  place-items: center;
+  gap: 2em;
+  background: #f6f6fe;
+  position: relative;
+}
+.Productive__img {
+  width: 100%;
+}
+.Productive__content-title {
+  text-align: center;
+  font-size: 1.15rem;
+  font-family: "Raleway";
+  margin-block: 1.5em;
+}
+.Productive__content-para {
+  text-align: left;
+  font-size: 0.85rem;
+}
+.Productive__content-link {
+  text-align: center;
+  font-size: 1rem;
+}
+.Productive__content-link a {
+  text-decoration: none;
+  color: #3c9f8f;
+  position: relative;
+}
+.Productive__content-link a::after {
+  content: "";
+  background-color: #3c9f8f;
+  width: 100%;
+  height: 0.1em;
+  position: absolute;
+  left: 0;
+  bottom: -0.25em;
+}
+.Productive__content-link a::after svg {
+  color: blue;
+}
+.Productive__content-link a:hover {
+  color: #00c8a7;
+  cursor: pointer;
+}
+.Productive__content-link a:hover svg {
+  fill: #00c8a7;
+}
+.Productive__content-link a:hover::after {
+  background-color: #00c8a7;
+}
+.Productive .Testimony {
+  padding: 1em 2em;
+  background-color: white;
+  border-radius: 0.2em;
+  font-family: "Open Sans";
+}
+.Productive .Testimony__content {
+  font-size: 0.8rem;
+}
+.Productive .Testimony__profile {
+  display: grid;
+  grid-template-columns: 3em 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "photo name" "photo designation";
+  gap: 0em 1em;
+}
+.Productive .Testimony__profile-photo {
+  grid-area: photo;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+.Productive .Testimony__profile-name {
+  grid-area: name;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.Productive .Testimony__profile-designation {
+  grid-area: designation;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.Early-access {
+  padding: 4em 2em;
+  background-color: #585989;
+  color: white;
+  font-family: "Open Sans";
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+.Early-access__content-title {
+  font-family: "Raleway";
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 0;
+}
+.Early-access__content-para {
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 1em 0em;
+}
+.Early-access .Form {
+  align-items: center;
+}
+.Early-access .Form__email {
+  border: none;
+  width: 80%;
+}
+.Early-access .Form__email:hover {
+  border: none;
+  outline: none;
+}
+.Early-access .Form__btn {
+  width: 80%;
+}
+
+footer {
+  padding: 8em 2em 3em;
+  background-color: #070439;
+  color: white;
+  font-family: "Open Sans";
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+}
+footer .Logo {
+  font-family: "Raleway";
+  position: absolute;
+  left: 2em;
+  top: 3em;
+}
+footer .Logo__name {
+  font-size: 3rem;
+  margin: 0;
+}
+footer .Footer__contact p {
+  display: inline-block;
+  margin: 0.5em 1em;
+}
+footer .Navbar__list:first-child {
+  margin-bottom: 2em;
+}
+footer .Navbar li {
+  display: block;
+  margin-block: 1em;
+  font-size: 1rem;
+  width: fit-content;
+}
+footer .Navbar li:hover {
+  color: #7c7ed2;
+  cursor: pointer;
+}
+footer .Footer__media {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+footer .Footer__media svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: white;
+}
+footer .Footer__media svg:hover {
+  fill: #7c7ed2;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
