@@ -68,9 +68,27 @@ body {
 
   font-family: "Raleway";
   font-weight: bold;
+
   &__email {
+    width: min(100%,400px);
+    position: relative;
+
+    &-warning {
+      display: none;
+      margin: 0;
+
+      position: absolute;
+      left: 0;
+      bottom: -1.35em;
+      
+      font-size: .8rem;
+      color: #db7575;
+    }
+  }
+
+  &__email input {
     padding: 1em;
-    width:  min(100%,30em);
+    width: 100%;
 
     border: .12em solid #4f4747;
     border-radius: .2em;
@@ -78,7 +96,7 @@ body {
     color: #4f4747;
   }
 
-  &__email:focus {
+  &__email input:focus {
     outline: .15em solid #3065f887;
     border: .2em solid $Bright-Blue;
 
@@ -146,7 +164,6 @@ header {
     &__btn {
       width: min(100%, 400px);
     }
-
     margin-block: 2em;
   }
 }
@@ -320,11 +337,14 @@ $Productive__before-height: 5em;
   .Form {
     align-items: center;
     &__email {
-      border: none;
       width: 80%;
+
+      &-input {
+        border: none;
+      }
     }
 
-    &__email:hover {
+    &__email input:hover {
       border: none;
       outline: none;
     }

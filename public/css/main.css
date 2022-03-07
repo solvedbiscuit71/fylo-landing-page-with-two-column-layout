@@ -51,13 +51,26 @@ body {
   font-weight: bold;
 }
 .Form__email {
+  width: min(100%, 400px);
+  position: relative;
+}
+.Form__email-warning {
+  display: none;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: -1.35em;
+  font-size: 0.8rem;
+  color: #db7575;
+}
+.Form__email input {
   padding: 1em;
-  width: min(100%, 30em);
+  width: 100%;
   border: 0.12em solid #4f4747;
   border-radius: 0.2em;
   color: #4f4747;
 }
-.Form__email:focus {
+.Form__email input:focus {
   outline: 0.15em solid #3065f887;
   border: 0.2em solid #3065f8;
   outline-offset: 0.1em;
@@ -234,10 +247,12 @@ header .header__logo {
   align-items: center;
 }
 .Early-access .Form__email {
-  border: none;
   width: 80%;
 }
-.Early-access .Form__email:hover {
+.Early-access .Form__email-input {
+  border: none;
+}
+.Early-access .Form__email input:hover {
   border: none;
   outline: none;
 }
