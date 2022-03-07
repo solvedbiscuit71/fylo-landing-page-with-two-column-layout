@@ -61,6 +61,8 @@ body {
   display: flex;
   flex-flow: column;
 
+  align-items: center;
+
   gap: 1em;
   width: 100%;
 
@@ -138,7 +140,7 @@ header {
 
   .Form {
     &__btn {
-      width: 100%;
+      width: min(100%, 400px);
     }
 
     margin-block: 2em;
@@ -395,6 +397,65 @@ footer {
     svg:hover {
       fill: #7c7ed2;
       cursor: pointer;
+    }
+  }
+}
+
+/* Tablet view */
+
+@media only screen and (min-width: 567px) {
+  .Hero__img {
+    width: 80%;
+  }
+
+  .Hero__content {
+    padding-inline: 5em;
+  }
+
+  .Productive::before {
+    background-size: cover;
+
+    height: 8em;
+    top: -8em;
+  }
+
+  .Productive {
+    margin-top: 8em;
+
+    &__img {
+      width: 80%;
+    }
+
+    &__content {
+      padding-inline: 5em;
+
+      &-para {
+        padding-inline: 5em;
+      }
+    }
+  }
+
+  .Testimony {
+    width: min(100%, 400px);
+  }
+
+  .Early-access {
+    &__content {
+      padding-inline: 5em;
+
+      &-para {
+        padding-inline: 5em;
+      }
+    }
+
+    .Form {
+      &__email {
+        width: 60%;
+      }
+
+      &__btn {
+        width: 60%;
+      }
     }
   }
 }
